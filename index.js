@@ -59,5 +59,3 @@ function add(){
         document.querySelector('.input').value = '';
         createLi();
 }
-
-        
