@@ -26,10 +26,19 @@ function ready(){
             add();
         }
     }
-    
-    localStorage.getItem('task');
+    if(!localStorage.getItem('task')){
+        return arr;
+    }else{
+        const value = localStorage.getItem('task');
+        const value1 = JSON.parse(value);
+        console.log(value1.length)
+        for(let i = 0; i < value1.length; i++){
+            const li = document.createElement('li');
+            li.innerHTML = value1[i];
+            document.querySelector('#ul').append(li);
+        }
+    }
 }
-
 
 function createLi(){
     const li = document.createElement('li'); 
@@ -43,10 +52,12 @@ function createLi(){
 function add(){ 
         arr.push(document.querySelector('.input').value);
         arr.sort();
-        localStorage.setItem('task', arr);
         console.log(arr);
+        let value = JSON.stringify(arr);
+        console.log(value)
+        localStorage.setItem('task', value)
+        console.log(localStorage);
         document.querySelector('.input').value = '';
-        
         createLi();
 }
 
