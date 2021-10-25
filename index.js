@@ -31,7 +31,7 @@ function ready(){
     }else{
         const value = localStorage.getItem('task');
         const value1 = JSON.parse(value);
-        console.log(value1.length)
+        console.log(value1)
         for(let i = 0; i < value1.length; i++){
             const li = document.createElement('li');
             li.innerHTML = value1[i];
