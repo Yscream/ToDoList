@@ -47,7 +47,7 @@ function createLi(){
         }  
 }
 
-//JSON.parse(localStorage.getItem('task'));
+
 function add(){ 
         arr.push(document.querySelector('.input').value);
         arr.sort();
