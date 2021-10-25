@@ -51,11 +51,8 @@ function createLi(){
 function add(){ 
         arr.push(document.querySelector('.input').value);
         arr.sort();
-        console.log(arr);
         let value = JSON.stringify(arr);
-        console.log(value)
         localStorage.setItem('task', value)
-        console.log(localStorage);
         document.querySelector('.input').value = '';
         createLi();
 }
