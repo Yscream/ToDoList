@@ -8,7 +8,7 @@ function createLi() {
         ul.append(li)
     }
     const arr2 = []
-    // Add all list to a new array
+    // Add all list to a new arrayy
     for (let i = 0; i < ul.childNodes.length; i++) {
         arr2.push(ul.childNodes[i].innerHTML)
     }
