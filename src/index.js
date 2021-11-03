@@ -14,7 +14,7 @@ function createLi() {
     }
     // Sort the list
     arr2.sort()
-    ul.innerHTML = '' // если убрать этот параметр то при каждом новом добавлении элемента в список,
+    ul.innerHTML = '' // если убрать этот параметр то при каждом новом добавлении элемента в список
 
     // add all arr to a new list
     for (let j = 0; j < arr2.length; j++) {
